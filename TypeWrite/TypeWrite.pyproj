@@ -37,5 +37,12 @@
       <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TypewriteUtil\TypewriteUtil.csproj">
+      <Name>TypewriteUtil</Name>
+      <Project>{c7445b01-3a3f-4810-b70a-65e7664b401b}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
 </Project>

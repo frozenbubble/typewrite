@@ -1,8 +1,12 @@
-import clr
-clr.AddReference("System.Drawing")
+#import clr
+#clr.AddReference("System.Drawing")
+import sys
 import System.Drawing as drawing
 
+path = sys.argv[1]
+
 shades = {' ', '¨', '`', '.', ',', '-', '^', '/' '(', 'u', 'w', 'g', 'W', '%', '&', '#'}
+
 
 print('Hello world')
 
