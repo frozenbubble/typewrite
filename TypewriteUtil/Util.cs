@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Net;
 using System.IO;
 
-namespace Typewrite
+namespace TypewriteUtil
 {
     public class ImageUtil
     {
@@ -20,9 +20,10 @@ namespace Typewrite
             return bm;
         }
 
-        public static Bitmap GetImage(string path)
+        public static Image GetImage(string path)
         {
-            
+            var fs = File.Open(path, FileMode.Open);
+            return Bitmap.FromStream(fs);
         }
 
         public static Bitmap ResizeImage(Bitmap img, int height, int width)
