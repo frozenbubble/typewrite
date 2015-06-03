@@ -7,7 +7,7 @@ import re
 import io
 
 
-shades = ['_', '-', '^', '/', '(', 'u', 'w', 'g', 'W', '%', '&', '#']
+shades = [' ', '-', '^', '/', 'c', 'u', 'x', 'w', 'a', 'g', '8', '%', '&', '#']
 chars = 100
 
 if (len(sys.argv) != 2):
@@ -35,7 +35,7 @@ typed = [['0' for x in range(w)] for y in range(h)]
 
 for i, p in enumerate(im.im):
     brightness = p[0] + p[1] + p[2]
-    shade = shades[int((brightness*12)/768) - 1]
+    shade = shades[int((brightness*len(shades))/768)]
 
     x = int(i/w)
     y = i - int(i/w)*w
